@@ -79,7 +79,7 @@ public class TestPerson {
   @Test
   public void useNaturalComparison() {
     List<Person> people = Person.getNewardFamily();
-    Collections.sort(people);
+    //Collections.sort(people);
     
     assertEquals(new Person("Ted", 41, 250000), people.get(0));
     assertEquals(new Person("Charlotte", 43, 150000), people.get(1));

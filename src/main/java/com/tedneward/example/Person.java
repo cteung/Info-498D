@@ -20,13 +20,9 @@ public class Person implements Comparable<Person>{
     salary = s;
   }
 
-  public int compare(Person p1, Person p2){
-    return p1.age - p2.age;
-  }
-
   @Override
   public int compareTo(Person other){
-    return this.age - other.age;
+    return (int) (this.salary - other.salary);
   }
 
   public void setSalary(double salary){
@@ -90,9 +86,14 @@ public class Person implements Comparable<Person>{
   public int timeWarp() {
     return age + 10;
   }
-  
-  public boolean equals(Person other) {
-    return ((this.name).equals(other.name) && (this.age)==(other.age));
+
+  @Override
+  public boolean equals(Object other) {
+    if (other instanceof Person) {
+      Person p = (Person)other;
+      return ((this.name.equals(((Person) other).getName())) && (this.age == ((Person) other).getAge()));
+    }
+    return false;
   }
 
   public String toString() {
@@ -112,17 +113,19 @@ public class Person implements Comparable<Person>{
 
   public static ArrayList<Person> getNewardFamily() {
     ArrayList<Person> family = new ArrayList<Person>();
+
     family.add(new Person("Ted", 41, 250000));
     family.add(new Person("Charlotte", 43, 150000));
     family.add(new Person("Michael", 22, 10000));
     family.add(new Person("Matthew", 15, 0));
+
     return family;
   }
 
   public static class AgeComparator implements Comparator<Person> {
     @Override
     public int compare(Person p1, Person p2){
-      return p1.compareTo(p2);
-    }
+      return p1.getAge() - p2.getAge();
+  }
   }
 }
