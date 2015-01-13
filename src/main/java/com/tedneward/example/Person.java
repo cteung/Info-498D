@@ -21,12 +21,12 @@ public class Person implements Comparable<Person>{
   }
 
   public int compare(Person p1, Person p2){
-    double d = p2.getSalary()- p1.getSalary();
-    return (int) d;
+    return p1.age - p2.age;
   }
 
+  @Override
   public int compareTo(Person other){
-    return other.age - this.age;
+    return this.age - other.age;
   }
 
   public void setSalary(double salary){
@@ -92,11 +92,11 @@ public class Person implements Comparable<Person>{
   }
   
   public boolean equals(Person other) {
-    return ((this.getName()).equals(other.getName()) && (this.getAge())==(other.getAge()));
+    return ((this.name).equals(other.name) && (this.age)==(other.age));
   }
 
-  public String tostring() {
-    return "[Person name:"+this.getName()+" age:"+String.valueOf(this.getAge())+" salary:"+String.valueOf(this.getSalary())+"]";
+  public String toString() {
+    return "[Person name:"+this.name+" age:"+this.age+" salary:"+this.salary+"]";
   }
 
   // PropertyChangeListener support; you shouldn't need to change any of
