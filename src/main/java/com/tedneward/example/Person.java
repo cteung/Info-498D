@@ -66,8 +66,9 @@ public class Person implements Comparable<Person>{
   public void setSSN(String value) {
     String old = ssn;
     ssn = value;
-    
-    //this.pcs.firePropertyChange("ssn", old, value);
+    if (old != null){
+      this.pcs.firePropertyChange("ssn", old, value);
+    }
     propertyChangeFired = true;
   }
 
