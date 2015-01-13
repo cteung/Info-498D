@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tedneward.example.TestPerson" tests="8" skipped="0" failures="1" errors="0" timestamp="2015-01-13T18:21:35" hostname="Chris-Y410P" time="0.033">
+<testsuite name="com.tedneward.example.TestPerson" tests="8" skipped="0" failures="1" errors="0" timestamp="2015-01-13T19:05:09" hostname="Chris-Y410P" time="0.007">
   <properties/>
-  <testcase name="catchPropertyChange" classname="com.tedneward.example.TestPerson" time="0.021">
+  <testcase name="setNameToNull" classname="com.tedneward.example.TestPerson" time="0.003"/>
+  <testcase name="useAgeComparator" classname="com.tedneward.example.TestPerson" time="0.001"/>
+  <testcase name="exerciseTheBasics" classname="com.tedneward.example.TestPerson" time="0.0"/>
+  <testcase name="useNaturalComparison" classname="com.tedneward.example.TestPerson" time="0.0"/>
+  <testcase name="catchPropertyChange" classname="com.tedneward.example.TestPerson" time="0.002">
     <failure message="java.lang.AssertionError: expected:&lt;&gt; but was:&lt;null&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;&gt; but was:&lt;null&gt;
 	at org.junit.Assert.fail(Assert.java:91)
 	at org.junit.Assert.failNotEquals(Assert.java:645)
@@ -10,8 +14,7 @@
 	at com.tedneward.example.TestPerson$1.propertyChange(TestPerson.java:100)
 	at java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:335)
 	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:327)
-	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:263)
-	at com.tedneward.example.Person.setSSN(Person.java:70)
+	at com.tedneward.example.Person.setSSN(Person.java:71)
 	at com.tedneward.example.TestPerson.catchPropertyChange(TestPerson.java:107)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -57,13 +60,9 @@
 	at java.lang.Thread.run(Thread.java:745)
 </failure>
   </testcase>
-  <testcase name="viewReadabletoString" classname="com.tedneward.example.TestPerson" time="0.001"/>
-  <testcase name="useNaturalComparison" classname="com.tedneward.example.TestPerson" time="0.0"/>
-  <testcase name="exerciseTheBasics" classname="com.tedneward.example.TestPerson" time="0.0"/>
-  <testcase name="exercisePesonEquals" classname="com.tedneward.example.TestPerson" time="0.001"/>
-  <testcase name="setAgeToBeNegative" classname="com.tedneward.example.TestPerson" time="0.001"/>
-  <testcase name="useAgeComparator" classname="com.tedneward.example.TestPerson" time="0.002"/>
-  <testcase name="setNameToNull" classname="com.tedneward.example.TestPerson" time="0.001"/>
+  <testcase name="setAgeToBeNegative" classname="com.tedneward.example.TestPerson" time="0.0"/>
+  <testcase name="exercisePesonEquals" classname="com.tedneward.example.TestPerson" time="0.0"/>
+  <testcase name="viewReadabletoString" classname="com.tedneward.example.TestPerson" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
